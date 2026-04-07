@@ -66,7 +66,7 @@
 
 ```bash
 cd src
-python reconstruct_nesvor.py \
+python reconstruct.py \
     --stacks /path/to/stack1.nii.gz /path/to/stack2.nii.gz /path/to/stack3.nii.gz \
     --slice_thickness 3.0 \
     --output ../output/
