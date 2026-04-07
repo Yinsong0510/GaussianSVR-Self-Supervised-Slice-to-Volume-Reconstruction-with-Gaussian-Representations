@@ -119,22 +119,6 @@ The pipeline automatically:
 
 ---
 
-## 📈 Results
-
-Evaluated on the [FeTA dataset](https://doi.org/10.7303/syn25649159) with simulated motion (3 orthogonal stacks, 15–30 slices each, 1 mm in-plane, 2.5–3.5 mm thickness):
-
-| Method | PSNR (dB) ↑ | SSIM ↑ | NRMSE ↓ |
-|:-------|:-----------:|:------:|:-------:|
-| NiftyMIC | 21.17 (1.95) | 0.7653 (0.0559) | 0.0989 (0.0234) |
-| SVoRT | 23.98 (2.65) | 0.8209 (0.0618) | 0.0905 (0.1227) |
-| NeSVoR | 25.58 (1.81) | 0.8940 (0.0407) | 0.0536 (0.0105) |
-| **GaussianSVR (Ours)** | **28.19 (3.02)** | **0.9281 (0.0552)** | **0.0468 (0.0219)** |
-
-> [!IMPORTANT]
-> GaussianSVR outperforms all baselines across all three metrics, achieving **+2.61 dB PSNR** improvement over the second-best method.
-
----
-
 ## 📝 Citation
 
 If you find this work useful, please cite our paper:
