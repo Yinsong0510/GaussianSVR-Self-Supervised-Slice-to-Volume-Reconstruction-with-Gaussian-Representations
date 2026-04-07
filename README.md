@@ -141,12 +141,6 @@ If you find this work useful, please cite our paper:
 
 ---
 
-## 📄 License
-
-This project is for **research purposes**. Please contact the authors for licensing information.
-
----
-
 <p align="center">
   📧 <b>Contact:</b> <a href="mailto:y.wang23@imperial.ac.uk">y.wang23@imperial.ac.uk</a>
 </p>
