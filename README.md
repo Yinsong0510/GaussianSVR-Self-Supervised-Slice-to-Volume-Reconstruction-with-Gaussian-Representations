@@ -8,6 +8,7 @@
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-%3E%3D3.9-3776AB.svg?logo=python&logoColor=white" alt="Python"></a>
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-%3E%3D2.0-EE4C2C.svg?logo=pytorch&logoColor=white" alt="PyTorch"></a>
   <a href="https://developer.nvidia.com/cuda-toolkit"><img src="https://img.shields.io/badge/CUDA-%3E%3D11.8-76B900.svg?logo=nvidia&logoColor=white" alt="CUDA"></a>
+  <a href="https://github.com/YinsongWang/GaussianSVR/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Research-yellow.svg" alt="License"></a>
   <a href="https://github.com/YinsongWang/GaussianSVR/stargazers"><img src="https://img.shields.io/github/stars/YinsongWang/GaussianSVR?style=social" alt="Stars"></a>
 </p>
 
