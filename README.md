@@ -56,24 +56,6 @@
 | CUDA | ≥ 11.8 |
 | PyTorch | ≥ 2.0 |
 
-### Setup
-
-```bash
-# Clone the repository
-git clone https://github.com/YinsongWang/GaussianSVR.git
-cd GaussianSVR
-
-# Create conda environment
-conda create -n gsvr python=3.9
-conda activate gsvr
-
-# Install PyTorch (CUDA 11.8)
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
-
-# Install dependencies
-pip install nibabel scipy pyyaml kornia pytorch-lightning tensorboard
-```
-
 > [!NOTE]
 > CUDA extensions for transform conversion, slice acquisition, and Gaussian intensity computation are compiled automatically on first run via PyTorch's JIT.
 
