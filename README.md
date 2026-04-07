@@ -1,6 +1,6 @@
 <p align="center">
   <h1 align="center">GaussianSVR</h1>
-  <h3 align="center">Self-Supervised Slice-to-Volume Reconstruction<br>with Gaussian Representations for Fetal MRI</h3>
+  <h2 align="center">Self-Supervised Slice-to-Volume Reconstruction<br>with Gaussian Representations for Fetal MRI (ISBI 2026 Oral)</h2>
 </p>
 
 <p align="center">
