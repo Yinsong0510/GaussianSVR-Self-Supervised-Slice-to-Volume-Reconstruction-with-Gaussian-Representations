@@ -35,9 +35,7 @@
 - 🎯 **3D Gaussian Representation** — Models the volume as a set of Gaussian primitives with learnable position, scaling, rotation, and intensity for spatially localized, fine-grained adaptation to complex fetal brain anatomy
 - 🔁 **Self-Supervised Training** — A differentiable forward slice acquisition model re-simulates acquired slices from the reconstructed volume; optimized with L1 + D-SSIM + TV loss, **no ground-truth volume required**
 - 📶 **Multi-Resolution Strategy** — Coarse-to-fine optimization: rigid motion is first estimated at low resolution for stability, then refined at full resolution for anatomical detail
-- ⚡ **Joint Optimization** — Simultaneously optimizes Gaussian parameters and per-slice rigid transforms, with adaptive densification (clone / split / prune) of Gaussians during training
-- 🚀 **Pretrained SVoRT Initialization** — Uses [NeSVoR](https://github.com/daviddmc/NeSVoR)'s pretrained SVoRTv2 model (auto-downloaded from Zenodo) for robust initial motion estimation
-
+- ⚡ **Joint Optimization** — Simultaneously optimizes Gaussian parameters and per-slice rigid transforms, with adaptive densification (clone/split/prune) of Gaussians during training
 ---
 
 ## 🏗️ Framework
@@ -161,12 +159,10 @@ If you find this work useful, please cite our paper:
 
 ```bibtex
 @article{wang2026self,
-  title   = {Self-Supervised Slice-to-Volume Reconstruction with Gaussian 
-             Representations for Fetal MRI},
-  author  = {Wang, Yinsong and Fletcher, Thomas and Luo, Xinzhe and 
-             Dineen, Aine Travers and Cusack, Rhodri and Qin, Chen},
-  journal = {arXiv preprint arXiv:2601.22990},
-  year    = {2026}
+  title={Self-Supervised Slice-to-Volume Reconstruction with Gaussian Representations for Fetal MRI},
+  author={Wang, Yinsong and Fletcher, Thomas and Luo, Xinzhe and Dineen, Aine Travers and Cusack, Rhodri and Qin, Chen},
+  journal={arXiv preprint arXiv:2601.22990},
+  year={2026}
 }
 ```
 
