@@ -1,0 +1,36 @@
+# --- SVoRTv2 Motion Estimation ---
+svort:
+  model_type: SVoRTv2
+  model_param:
+    n_iter: 4
+    iqa: True
+    vol: True
+    pe: True
+
+# --- Gaussian Reconstruction ---
+# Gaussian initialization
+ini_intensity: 1.0
+ini_sigma: 0.15
+spatial_lr_scale: 1
+num_fg_gaussian: 4000
+num_bg_gaussian: 50
+
+# Training
+max_iter: 10001
+low_reso_stage: 4000
+l1_weight: 1.0
+tv_weight: 0.01
+
+# Densification
+do_density_control: True
+densification_interval: 100
+densify_from_iter: 1000
+densify_until_iter: 10001
+max_gaussians: 150000
+max_grad: 1.0e-05
+min_intensity: 0.0001
+sigma_extent: 1
+
+# Logging and saving
+image_save_iter: 2000
+log_iter: 1000
