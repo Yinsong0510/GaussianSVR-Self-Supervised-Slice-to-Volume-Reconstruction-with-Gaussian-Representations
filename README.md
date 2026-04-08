@@ -108,8 +108,7 @@ The pipeline automatically:
 
 1. Reads voxel spacing and affine from the NIfTI header
 2. Resamples to 1.0 mm in-plane resolution
-3. Crops / pads to 128 × 128 for SVoRT
-4. Maps SVoRT outputs back to the original geometry
+3. Crops/pads the slice to 128 × 128
 
 </details>
 
