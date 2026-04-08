@@ -40,7 +40,7 @@
 ## 🏗️ Framework
 
 <p align="center">
-  <img src="docs/framework.png" width="92%"/>
+  <img src="GaussianSVR.png" width="92%"/>
 </p>
 
 ---
