@@ -95,13 +95,12 @@ class GaussianModel:
         mask = seg_low_reso.detach().cpu().numpy()[0]
         coords = torch.stack(torch.meshgrid(torch.arange(D), torch.arange(H), torch.arange(W)), dim=-1).reshape(-1,
                                                                                                                 3).cuda()
-        fg_coords = np.argwhere(mask == 1)
-        fg_indices = np.random.choice(len(fg_coords), fg_num_samples, replace=False)
-        fg_coords = coords[fg_indices]
+        # Fix 1: sample raster indices from the fg/bg pools so coordinates and intensities are the selected voxels.
+        fg_indices = np.random.choice(np.flatnonzero(mask.reshape(-1) == 1), fg_num_samples, replace=False)
+        fg_coords = coords[torch.as_tensor(fg_indices, device=coords.device)]
 
-        bg_coords = np.argwhere(mask == 0)
-        bg_indices = np.random.choice(len(bg_coords), bg_num_samples, replace=False)
-        bg_coords = coords[bg_indices]
+        bg_indices = np.random.choice(np.flatnonzero(mask.reshape(-1) == 0), bg_num_samples, replace=False)
+        bg_coords = coords[torch.as_tensor(bg_indices, device=coords.device)]
 
         coords = torch.cat((fg_coords, bg_coords), dim=0)
         indices = np.concatenate((fg_indices, bg_indices), axis=0)
@@ -121,7 +120,8 @@ class GaussianModel:
         # Adjust scaling based on the number of neighbours
         scaling = ini_sigma / num_neighbours.float()
 
-        intensities = ini_intensity * image_array + 1e-4
+        # Fix 2: keep inverse_sigmoid inputs inside (0, 1); p99-normalised SVoRT volumes can exceed 1 -> NaN.
+        intensities = (ini_intensity * image_array + 1e-4).clamp(1e-4, 1 - 1e-4)
         coords = coords.float()
         coords = coords / torch.tensor([D, H, W], dtype=torch.float, device="cuda")
 
